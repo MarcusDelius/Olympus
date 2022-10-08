@@ -1,5 +1,3 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Landing.module.css";
@@ -7,23 +5,17 @@ import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 
 import { useExampleNFTContractRead } from "../contracts";
-import { Inventory } from "../Inventory";
-import { MintButton } from "../MintButton";
-import { useIsMounted } from "../useIsMounted";
 
 const Landing = () => {
-  const totalSupply = useExampleNFTContractRead({
-    functionName: "totalSupply",
-    watch: true,
-  });
-  const maxSupply = useExampleNFTContractRead({ functionName: "MAX_SUPPLY" });
-
-  const isMounted = useIsMounted();
-
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  if (session) {
+    router.push("/home");
+  }
   return (
     <div className={styles.app}>
       <Head>
-        <title>TFM Project</title>
+        <title>OLYMPUS</title>
         <meta
           name="description"
           content="Website for the TFM blockchain project"

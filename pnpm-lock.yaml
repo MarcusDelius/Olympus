@@ -44,6 +44,7 @@ importers:
       eslint-plugin-react-hooks: ^4.6.0
       ethers: 5.7.0
       graphql: ^16.6.0
+      moralis: ^2.6.4
       next: 12.3.0
       next-auth: ^4.12.3
       postcss: ^8.4.5
@@ -66,6 +67,7 @@ importers:
       classnames: 2.3.1
       ethers: 5.7.0
       graphql: 16.6.0
+      moralis: 2.6.4
       next: 12.3.0_oj5jbg2ldmqbgxwq3dy6abnm5a
       next-auth: 4.12.3_5cnqhqacu5mt2w4dmejsl6hu6y
       react: 17.0.2
@@ -2775,6 +2777,95 @@ packages:
     resolution: {integrity: sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==}
     dev: false
 
+  /@moralisweb3/api-utils/2.6.4:
+    resolution: {integrity: sha512-HOcamW6+W3+CjNRQlEg9LkvmjPT+cyp5NG6gEs3yQG9DjNg764IguXEhWbQXYHWgRui8/ho0/QZMvJhoiqYz2w==}
+    dependencies:
+      '@moralisweb3/core': 2.6.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@moralisweb3/auth/2.6.4:
+    resolution: {integrity: sha512-wflNS6rwSO3o2uEr+K54rOsUYMOzF+kPduDDO7zbB4jFotyO6EXslbVOEcKfKzEQ1+8/S6Q5TBMQhAUJHRC6CQ==}
+    dependencies:
+      '@moralisweb3/api-utils': 2.6.4
+      '@moralisweb3/core': 2.6.4
+      '@moralisweb3/evm-utils': 2.6.4
+      '@moralisweb3/sol-utils': 2.6.4
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - utf-8-validate
+    dev: false
+
+  /@moralisweb3/core/2.6.4:
+    resolution: {integrity: sha512-gndB/kFN6E3BkvV/bV3397bIidQizWI70tER0gTUKrNi1tAT8hHzzut1cLN1GN7PazWq5lH/YyxL49bD8x0E5g==}
+    dependencies:
+      axios: 0.27.2
+      eventemitter3: 4.0.7
+      typed-emitter: 2.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@moralisweb3/evm-api/2.6.4:
+    resolution: {integrity: sha512-WOZBsUyQTDlyy1awQ3qRfqrwPPC37Yi0KjyUZCGm0KU9oXGuCddb+SOn83L0xLeUivzgFKP6Rcsv4s3mSRgfhA==}
+    dependencies:
+      '@moralisweb3/api-utils': 2.6.4
+      '@moralisweb3/core': 2.6.4
+      '@moralisweb3/evm-utils': 2.6.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@moralisweb3/evm-utils/2.6.4:
+    resolution: {integrity: sha512-FzaCheQsgFFdWu69Vg327AJs1aLufvGAjCt8OAk9J8+fYJxwDPSA6jI8sQZ3y7gMaUgQNhhNx1ypwAuEONLuQg==}
+    dependencies:
+      '@ethersproject/address': 5.7.0
+      '@ethersproject/transactions': 5.7.0
+      '@moralisweb3/core': 2.6.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@moralisweb3/sol-api/2.6.4:
+    resolution: {integrity: sha512-AexYGuG7l8XjFRcwitTRjVF/aS5QP/JiUk5vlzIn3Nqgk/SnfCHf5LZdQAF5RYTZ0fzTcPWwx/WpIy95b4HG9A==}
+    dependencies:
+      '@moralisweb3/api-utils': 2.6.4
+      '@moralisweb3/core': 2.6.4
+      '@moralisweb3/sol-utils': 2.6.4
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - utf-8-validate
+    dev: false
+
+  /@moralisweb3/sol-utils/2.6.4:
+    resolution: {integrity: sha512-00khFtkXbXKFdezvH5gr1mxtYmv8kjncKBk4nz0s6YchLlLqtcHSW4Cv29y6CDeI0qdhdvcfFIO3nsUHhkTnkA==}
+    dependencies:
+      '@moralisweb3/core': 2.6.4
+      '@solana/web3.js': 1.63.1
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - utf-8-validate
+    dev: false
+
+  /@moralisweb3/streams/2.6.4:
+    resolution: {integrity: sha512-YztnsAyrkguL5hh8LXobZW/kPIFsLrz0m/0rQEW3Ok9YBoj2josuvNHSvv+/zvQ+PophVEaCylHyhep1/nSFwA==}
+    dependencies:
+      '@moralisweb3/api-utils': 2.6.4
+      '@moralisweb3/core': 2.6.4
+      '@moralisweb3/evm-utils': 2.6.4
+      ethereumjs-util: 7.1.5
+      web3-eth-abi: 1.8.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /@next/env/12.3.0:
     resolution: {integrity: sha512-PTJpjAFVbzBQ9xXpzMTroShvD5YDIIy46jQ7d4LrWpY+/5a8H90Tm8hE3Hvkc5RBRspVo7kvEOnqQms0A+2Q6w==}
 
@@ -2887,6 +2978,18 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@noble/ed25519/1.7.1:
+    resolution: {integrity: sha512-Rk4SkJFaXZiznFyC/t77Q0NKS4FL7TLJJsVG2V2oiEq3kJVeTdxysEe/yRWSpnWMe808XRDJ+VFh5pt/FN5plw==}
+    dev: false
+
+  /@noble/hashes/1.1.3:
+    resolution: {integrity: sha512-CE0FCR57H2acVI5UOzIGSSIYxZ6v/HOhDR0Ro9VLyhnzLwx0o8W1mmgaqlEUx4049qJDlIBRztv5k+MM8vbO3A==}
+    dev: false
+
+  /@noble/secp256k1/1.7.0:
+    resolution: {integrity: sha512-kbacwGSsH/CTout0ZnZWxnW1B+jH/7r/WAAKLBtrRJ/+CUH7lgmQzl3GTrQua3SGKWNSDsS6lmjnDpIJ5Dxyaw==}
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -3212,6 +3315,31 @@ packages:
       - bufferutil
       - encoding
       - react-native
+      - utf-8-validate
+    dev: false
+
+  /@solana/web3.js/1.63.1:
+    resolution: {integrity: sha512-wgEdGVK5FTS2zENxbcGSvKpGZ0jDS6BUdGu8Gn6ns0CzgJkK83u4ip3THSnBPEQ5i/jrqukg998BwV1H67+qiQ==}
+    engines: {node: '>=12.20.0'}
+    dependencies:
+      '@babel/runtime': 7.19.0
+      '@noble/ed25519': 1.7.1
+      '@noble/hashes': 1.1.3
+      '@noble/secp256k1': 1.7.0
+      '@solana/buffer-layout': 4.0.0
+      bigint-buffer: 1.1.5
+      bn.js: 5.2.1
+      borsh: 0.7.0
+      bs58: 4.0.1
+      buffer: 6.0.1
+      fast-stable-stringify: 1.0.0
+      jayson: 3.7.0
+      node-fetch: 2.6.7
+      rpc-websockets: 7.5.0
+      superstruct: 0.14.2
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
       - utf-8-validate
     dev: false
 
@@ -4326,6 +4454,15 @@ packages:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
       follow-redirects: 1.15.1_debug@4.1.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /axios/0.27.2:
+    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+    dependencies:
+      follow-redirects: 1.15.1
+      form-data: 4.0.0
     transitivePeerDependencies:
       - debug
     dev: false
@@ -6580,7 +6717,7 @@ packages:
     dev: false
 
   /ethjs-unit/0.1.6:
-    resolution: {integrity: sha1-xmWSHkduh7ziqdWIpv4EBbLEFpk=}
+    resolution: {integrity: sha512-/Sn9Y0oKl0uqQuvgFk/zQgR7aw1g36qX/jzSQ5lSwlO0GigPymk4eGQfeNTD03w1dPOqfz8V77Cy43jH56pagw==}
     engines: {node: '>=6.5.0', npm: '>=3'}
     dependencies:
       bn.js: 4.11.6
@@ -6993,6 +7130,15 @@ packages:
       combined-stream: 1.0.8
       mime-types: 2.1.35
     dev: true
+
+  /form-data/4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+    dev: false
 
   /formdata-node/4.4.1:
     resolution: {integrity: sha512-0iirZp3uVDjVGt9p49aTaqjk84TrglENEDuqfdlZQ1roC9CWlPk6Avf8EEnZNcAqPonwkG35x4n3ww/1THYAeQ==}
@@ -9347,6 +9493,24 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  /moralis/2.6.4:
+    resolution: {integrity: sha512-WzpAvhysbZZxCc0W+dSrjd0/MNk5LJBCQQ+2D15EfsBMDjPhRtd/bNbdwLp8uXrR74kKU8jVSdb8JD+sGiBG9Q==}
+    dependencies:
+      '@moralisweb3/api-utils': 2.6.4
+      '@moralisweb3/auth': 2.6.4
+      '@moralisweb3/core': 2.6.4
+      '@moralisweb3/evm-api': 2.6.4
+      '@moralisweb3/evm-utils': 2.6.4
+      '@moralisweb3/sol-api': 2.6.4
+      '@moralisweb3/sol-utils': 2.6.4
+      '@moralisweb3/streams': 2.6.4
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - utf-8-validate
+    dev: false
+
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
 
@@ -9732,7 +9896,7 @@ packages:
     resolution: {integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==}
 
   /number-to-bn/1.7.0:
-    resolution: {integrity: sha1-uzYjWS9+X54AMLGXe9QaDFP+HqA=}
+    resolution: {integrity: sha512-wsJ9gfSz1/s4ZsJN01lyonwuxA1tml6X1yBDnfpMglypcBRFZZkus26EdPSlqS5GJfYddVZa22p3VNb3z5m5Ig==}
     engines: {node: '>=6.5.0', npm: '>=3'}
     dependencies:
       bn.js: 4.11.6
@@ -11196,7 +11360,6 @@ packages:
     resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
     dependencies:
       tslib: 2.4.0
-    dev: true
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
@@ -12254,6 +12417,12 @@ packages:
       - supports-color
     dev: true
 
+  /typed-emitter/2.1.0:
+    resolution: {integrity: sha512-g/KzbYKbH5C2vPkaXGu8DJlHrGKHLsM25Zg9WuC9pMGfuvT+X25tZQWo5fK1BjBm8+UrVE9LDCvaY0CQk+fXDA==}
+    optionalDependencies:
+      rxjs: 7.5.6
+    dev: false
+
   /typedarray-to-buffer/3.1.5:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
     dependencies:
@@ -12611,11 +12780,32 @@ packages:
       web3-utils: 1.7.0
     dev: false
 
+  /web3-eth-abi/1.8.0:
+    resolution: {integrity: sha512-xPeMb2hS9YLQK/Q5YZpkcmzoRGM+/R8bogSrYHhNC3hjZSSU0YRH+1ZKK0f9YF4qDZaPMI8tKWIMSCDIpjG6fg==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      '@ethersproject/abi': 5.7.0
+      web3-utils: 1.8.0
+    dev: false
+
   /web3-utils/1.7.0:
     resolution: {integrity: sha512-O8Tl4Ky40Sp6pe89Olk2FsaUkgHyb5QAXuaKo38ms3CxZZ4d3rPGfjP9DNKGm5+IUgAZBNpF1VmlSmNCqfDI1w==}
     engines: {node: '>=8.0.0'}
     dependencies:
       bn.js: 4.12.0
+      ethereum-bloom-filters: 1.0.10
+      ethereumjs-util: 7.1.5
+      ethjs-unit: 0.1.6
+      number-to-bn: 1.7.0
+      randombytes: 2.1.0
+      utf8: 3.0.0
+    dev: false
+
+  /web3-utils/1.8.0:
+    resolution: {integrity: sha512-7nUIl7UWpLVka2f09CMbKOSEvorvHnaugIabU4mj7zfMvm0tSByLcEu3eyV9qgS11qxxLuOkzBIwCstTflhmpQ==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      bn.js: 5.2.1
       ethereum-bloom-filters: 1.0.10
       ethereumjs-util: 7.1.5
       ethjs-unit: 0.1.6

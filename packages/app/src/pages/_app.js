@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
 import "react-toastify/dist/ReactToastify.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import Layout from "../components/layout";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";

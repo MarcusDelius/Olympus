@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import React from "react";
-
+import { toast } from "react-toastify";
 import LoadingScreen from "./loadingScreen";
 import { Navbar } from "./Navbar";
 import { SideNav } from "./sideNav";
@@ -9,7 +9,6 @@ import { SideNav } from "./sideNav";
 export default function Layout({ children, ...props }) {
   const { data: session, status } = useSession();
   const router = useRouter();
-  //const dispatch = useNotification();
 
   if (status === "loading") {
     return (
@@ -20,14 +19,17 @@ export default function Layout({ children, ...props }) {
     );
   } else {
     if ((status !== "authenticated") & (router.pathname !== "/")) {
-      const icon = React.ReactElement;
-      /* dispatch({
-        type: "error",
-        message: "You need to login first!",
-        title: "Access denied",
-        icon,
-        position: "topR",
-      }); */
+      console.log("NO AUTH");
+      const toastId = toast.loading("Starting…");
+      toast.update(toastId, {
+        render: {
+          isLoading: false,
+          type: "success",
+          render: `You have to login first!`,
+          autoClose: 5000,
+          closeButton: true,
+        },
+      });
       router.push("/");
     } else {
       //Si el usuario está autenticado (o estamos en landingPage), se muestra el layout
